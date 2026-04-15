@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Published Papers | ScholarAIO</title>
+  <meta name="description" content="学术综述与技术调研报告归档库 - ScholarAIO Published Papers">
+  <meta property="og:title" content="Published Papers | ScholarAIO">
+  <meta property="og:description" content="学术综述与技术调研报告归档库">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>ScholarAIO</h1>
+        <span class="tagline">Published Papers</span>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>这是一个学术综述与技术调研报告的归档展示页面，涵盖 AI 加速器架构、硬件综合、专利分析等领域的研究成果。</p>
+    </section>
+
+    <section class="controls">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索标题、关键词、作者..." aria-label="Search papers">
+      </div>
+      <div class="filters">
+        <select id="filter-year" aria-label="Filter by year">
+          <option value="">全部年份</option>
+          <option value="2026">2026</option>
+        </select>
+        <select id="filter-subject" aria-label="Filter by subject">
+          <option value="">全部主题</option>
+          <option value="AI 加速器专利布局与技术生态分析">AI 加速器专利布局与技术生态分析</option>
+<option value="AI加速器架构与专利技术分析">AI加速器架构与专利技术分析</option>
+<option value="AI工程 / 学术交流">AI工程 / 学术交流</option>
+<option value="NVIDIA GPU/GPGPU 硬件架构与代际演进分析">NVIDIA GPU/GPGPU 硬件架构与代际演进分析</option>
+<option value="SambaNova SN40L 可重构数据流架构分析">SambaNova SN40L 可重构数据流架构分析</option>
+<option value="数字芯片设计/高层次综合工具">数字芯片设计/高层次综合工具</option>
+<option value="硬件设计/编译器">硬件设计/编译器</option>
+<option value="计算机体系结构 / AI 加速器">计算机体系结构 / AI 加速器</option>
+<option value="计算机体系结构 / AI加速器架构">计算机体系结构 / AI加速器架构</option>
+<option value="计算机体系结构 / 硬件综合">计算机体系结构 / 硬件综合</option>
+<option value="计算机体系结构/AI加速器">计算机体系结构/AI加速器</option>
+        </select>
+      </div>
+      <div class="stats">
+        <span id="paper-count">共 11 篇论文</span>
+      </div>
+    </section>
+
+    <section id="papers-list" class="papers-list">
+      
+        <article class="paper-card" data-subject="计算机体系结构 / AI 加速器" data-year="2026" data-keywords="Google TPU 脉动阵列 光互连 领域专用架构 XLA编译器 超算系统 神经网络加速器">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-15</span>
+              <span class="paper-subject">计算机体系结构 / AI 加速器</span>
+            </div>
+            <h2 class="paper-title">Google Tensor Processing Unit 架构演进与生态分析：从脉动推理到光互连超算系统</h2>
+            <p class="paper-authors">Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Google TPU</span><span class="tag">脉动阵列</span><span class="tag">光互连</span><span class="tag">领域专用架构</span><span class="tag">XLA编译器</span><span class="tag">超算系统</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-15-google-tpu架构演进与生态分析/google-tpu-comprehensive-survey.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-15-google-tpu架构演进与生态分析')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-15-google-tpu架构演进与生态分析" style="display:none;">
+            <p><strong>关键词：</strong>Google TPU, 脉动阵列, 光互连, 领域专用架构, XLA编译器, 超算系统, 神经网络加速器</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-15-Google-TPU架构演进与生态分析</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="AI 加速器专利布局与技术生态分析" data-year="2026" data-keywords="Google TPU 专利分析 脉动阵列 神经架构搜索 bfloat16 光电路交换 MEMS OCS 编译器优化">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-15</span>
+              <span class="paper-subject">AI 加速器专利布局与技术生态分析</span>
+            </div>
+            <h2 class="paper-title">Google TPU 相关技术专利布局分析：从脉动阵列到光互连的闭源生态</h2>
+            <p class="paper-authors">技术调研报告, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Google TPU</span><span class="tag">专利分析</span><span class="tag">脉动阵列</span><span class="tag">神经架构搜索</span><span class="tag">bfloat16</span><span class="tag">光电路交换</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-15-google-tpu-相关技术专利布局分析/literature-review.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-15-google-tpu-相关技术专利布局分析')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-15-google-tpu-相关技术专利布局分析" style="display:none;">
+            <p><strong>关键词：</strong>Google TPU, 专利分析, 脉动阵列, 神经架构搜索, bfloat16, 光电路交换, MEMS OCS, 编译器优化</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-15-Google-TPU-相关技术专利布局分析</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="AI加速器架构与专利技术分析" data-year="2026" data-keywords="Groq TSP 确定性计算 软件定义硬件 功能切片 软件调度网络 专利分析 AI加速器">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-14</span>
+              <span class="paper-subject">AI加速器架构与专利技术分析</span>
+            </div>
+            <h2 class="paper-title">Groq Tensor Streaming Processor 专利技术综述：确定性计算的体系结构创新与专利布局</h2>
+            <p class="paper-authors">Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Groq TSP</span><span class="tag">确定性计算</span><span class="tag">软件定义硬件</span><span class="tag">功能切片</span><span class="tag">软件调度网络</span><span class="tag">专利分析</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-14-groq-tsp-专利技术综述/literature-review.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-14-groq-tsp-专利技术综述')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-14-groq-tsp-专利技术综述" style="display:none;">
+            <p><strong>关键词：</strong>Groq TSP, 确定性计算, 软件定义硬件, 功能切片, 软件调度网络, 专利分析, AI加速器</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-14-Groq-TSP-专利技术综述</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="AI工程 / 学术交流" data-year="2026" data-keywords="AI Agent Harness Engineering ScholarAIO 知识蒸馏 技术扩散 利基市场 认知资本">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-11</span>
+              <span class="paper-subject">AI工程 / 学术交流</span>
+            </div>
+            <h2 class="paper-title">AI Agent Harness Engineering：从技术扩散到知识蒸馏</h2>
+            <p class="paper-authors">Presenter Name, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">AI Agent</span><span class="tag">Harness Engineering</span><span class="tag">ScholarAIO</span><span class="tag">知识蒸馏</span><span class="tag">技术扩散</span><span class="tag">利基市场</span></div>
+            <p class="paper-note">Final audited deliverable archived. Includes PPT source + live demo script. Pure TikZ diagrams, no external images.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-11-ai-agent-harness-engineering/ai_agent_harness.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-11-ai-agent-harness-engineering')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-11-ai-agent-harness-engineering" style="display:none;">
+            <p><strong>关键词：</strong>AI Agent, Harness Engineering, ScholarAIO, 知识蒸馏, 技术扩散, 利基市场, 认知资本</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived. Includes PPT source + live demo script. Pure TikZ diagrams, no external images.</p>
+            <p><strong>原始目录：</strong>2026-04-11-AI-Agent-Harness-Engineering</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="硬件设计/编译器" data-year="2026" data-keywords="高层次综合 数据流计算 硬件加速器 Kahn进程网络 编译器中间表示 Google XLS DSLX">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-10</span>
+              <span class="paper-subject">硬件设计/编译器</span>
+            </div>
+            <h2 class="paper-title">数据流驱动的开源高层次综合：Google XLS技术调研</h2>
+            <p class="paper-authors">技术调研, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">高层次综合</span><span class="tag">数据流计算</span><span class="tag">硬件加速器</span><span class="tag">Kahn进程网络</span><span class="tag">编译器中间表示</span><span class="tag">Google XLS</span></div>
+            <p class="paper-note">Final audited deliverable archived. Reconstructed and reorganized version with added arith simplification pass analysis, DSLX bit-slicing syntax, and full GitHub Discussions survey.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-10-数据流驱动的开源高层次综合-google-xls技术调研/xls_survey.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-10-数据流驱动的开源高层次综合-google-xls技术调研')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-10-数据流驱动的开源高层次综合-google-xls技术调研" style="display:none;">
+            <p><strong>关键词：</strong>高层次综合, 数据流计算, 硬件加速器, Kahn进程网络, 编译器中间表示, Google XLS, DSLX</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived. Reconstructed and reorganized version with added arith simplification pass analysis, DSLX bit-slicing syntax, and full GitHub Discussions survey.</p>
+            <p><strong>原始目录：</strong>2026-04-10-数据流驱动的开源高层次综合-Google-XLS技术调研</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="计算机体系结构 / 硬件综合" data-year="2026" data-keywords="Google XLS 数据流 HLS DSLX 加速器 硬件综合">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-10</span>
+              <span class="paper-subject">计算机体系结构 / 硬件综合</span>
+            </div>
+            <h2 class="paper-title">Google XLS：数据流 HLS 的端到端实践与批判性审视</h2>
+            <p class="paper-authors">王志豪, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Google XLS</span><span class="tag">数据流 HLS</span><span class="tag">DSLX</span><span class="tag">加速器</span><span class="tag">硬件综合</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-10-google-xls-数据流-hls-的端到端实践与批判性审视/main.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-10-google-xls-数据流-hls-的端到端实践与批判性审视')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-10-google-xls-数据流-hls-的端到端实践与批判性审视" style="display:none;">
+            <p><strong>关键词：</strong>Google XLS, 数据流 HLS, DSLX, 加速器, 硬件综合</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-10-Google XLS：数据流 HLS 的端到端实践与批判性审视</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="计算机体系结构/AI加速器" data-year="2026" data-keywords="硬连线语言处理单元 大语言模型推理 领域专用架构 计算还原主义 牧本浪潮 Taalas HC1 HNLPU">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-08</span>
+              <span class="paper-subject">计算机体系结构/AI加速器</span>
+            </div>
+            <h2 class="paper-title">硬连线语言处理单元：架构、范式与哲学基础</h2>
+            <p class="paper-authors">学术综述, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">硬连线语言处理单元</span><span class="tag">大语言模型推理</span><span class="tag">领域专用架构</span><span class="tag">计算还原主义</span><span class="tag">牧本浪潮</span><span class="tag">Taalas HC1</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-08-硬连线语言处理单元/main.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-08-硬连线语言处理单元')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-08-硬连线语言处理单元" style="display:none;">
+            <p><strong>关键词：</strong>硬连线语言处理单元, 大语言模型推理, 领域专用架构, 计算还原主义, 牧本浪潮, Taalas HC1, HNLPU</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-08-硬连线语言处理单元</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="数字芯片设计/高层次综合工具" data-year="2026" data-keywords="Google XLS 高层次综合 HLS 数据流 开源EDA 硬件加速 XLS IR DSLX">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-03</span>
+              <span class="paper-subject">数字芯片设计/高层次综合工具</span>
+            </div>
+            <h2 class="paper-title">数据流驱动的开源高层次综合：Google XLS技术调研</h2>
+            <p class="paper-authors">技术调研, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Google XLS</span><span class="tag">高层次综合</span><span class="tag">HLS</span><span class="tag">数据流</span><span class="tag">开源EDA</span><span class="tag">硬件加速</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-03-google-xls技术调研/xls_survey.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-03-google-xls技术调研')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-03-google-xls技术调研" style="display:none;">
+            <p><strong>关键词：</strong>Google XLS, 高层次综合, HLS, 数据流, 开源EDA, 硬件加速, XLS IR, DSLX</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-03-Google-XLS技术调研</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="SambaNova SN40L 可重构数据流架构分析" data-year="2026" data-keywords="SambaNova SN40L RDU 可重构数据流架构 AI加速器 数据流处理器 Composition of Experts AI内存墙">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-02</span>
+              <span class="paper-subject">SambaNova SN40L 可重构数据流架构分析</span>
+            </div>
+            <h2 class="paper-title">SambaNova SN40L可重构数据流架构：大规模AI推理流式执行模型的批判性分析</h2>
+            <p class="paper-authors">技术综述</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">SambaNova SN40L</span><span class="tag">RDU</span><span class="tag">可重构数据流架构</span><span class="tag">AI加速器</span><span class="tag">数据流处理器</span><span class="tag">Composition of Experts</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-02-sambanova-sn40l-学术综述/SambaNova_SN40L_学术综述.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-02-sambanova-sn40l-学术综述')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-02-sambanova-sn40l-学术综述" style="display:none;">
+            <p><strong>关键词：</strong>SambaNova SN40L, RDU, 可重构数据流架构, AI加速器, 数据流处理器, Composition of Experts, AI内存墙</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-02-SambaNova-SN40L-学术综述</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="NVIDIA GPU/GPGPU 硬件架构与代际演进分析" data-year="2026" data-keywords="GPGPU SIMT Tensor Core NVIDIA Hopper Warp Scheduler 内存墙 数据流加速器">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-02</span>
+              <span class="paper-subject">NVIDIA GPU/GPGPU 硬件架构与代际演进分析</span>
+            </div>
+            <h2 class="paper-title">NVIDIA GPU 与 GPGPU 处理器硬件架构综述：从 SIMT 执行模型到 AI 时代的架构演进</h2>
+            <p class="paper-authors">技术调研报告, Claude (AI Assistant)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">GPGPU</span><span class="tag">SIMT</span><span class="tag">Tensor Core</span><span class="tag">NVIDIA Hopper</span><span class="tag">Warp Scheduler</span><span class="tag">内存墙</span></div>
+            <p class="paper-note">Final audited deliverable archived.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-02-nvidia-gpu与gpgpu处理器硬件架构综述/gpu-gpgpu-survey.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-02-nvidia-gpu与gpgpu处理器硬件架构综述')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-02-nvidia-gpu与gpgpu处理器硬件架构综述" style="display:none;">
+            <p><strong>关键词：</strong>GPGPU, SIMT, Tensor Core, NVIDIA Hopper, Warp Scheduler, 内存墙, 数据流加速器</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived.</p>
+            <p><strong>原始目录：</strong>2026-04-02-NVIDIA-GPU与GPGPU处理器硬件架构综述</p>
+          </div>
+        </article>
+        
+        <article class="paper-card" data-subject="计算机体系结构 / AI加速器架构" data-year="2026" data-keywords="Groq TSP 软件定义硬件 确定性执行 功能切片 张量流处理 AI加速器 多芯片同步 VLIW 编译器优化">
+          <div class="paper-header">
+            <div class="paper-meta">
+              <span class="paper-date">2026-04-02</span>
+              <span class="paper-subject">计算机体系结构 / AI加速器架构</span>
+            </div>
+            <h2 class="paper-title">Groq Tensor Streaming Processor 架构综述：软件定义硬件与确定性计算的范式革命</h2>
+            <p class="paper-authors">Claude (Anthropic)</p>
+          </div>
+          <div class="paper-body">
+            <div class="paper-keywords"><span class="tag">Groq TSP</span><span class="tag">软件定义硬件</span><span class="tag">确定性执行</span><span class="tag">功能切片</span><span class="tag">张量流处理</span><span class="tag">AI加速器</span></div>
+            <p class="paper-note">Final audited deliverable archived. 19 pages comprehensive survey covering TSP microarchitecture, functional slicing, 144-way VLIW ISA, compiler optimization techniques, multi-chip synchronization (HAC/SAC), Software-Scheduled Networking (SSN), and NVIDIA acquisition analysis.</p>
+          </div>
+          <div class="paper-footer">
+            <a class="btn btn-primary" href="assets/papers/2026-04-02-groq-tsp-架构综述/groq_tsp_survey_zh.pdf" target="_blank">📄 PDF</a>
+            <button class="btn btn-secondary" onclick="toggleAbstract(this, '2026-04-02-groq-tsp-架构综述')">ℹ️ 详情</button>
+          </div>
+          <div class="paper-abstract" id="abs-2026-04-02-groq-tsp-架构综述" style="display:none;">
+            <p><strong>关键词：</strong>Groq TSP, 软件定义硬件, 确定性执行, 功能切片, 张量流处理, AI加速器, 多芯片同步, VLIW, 编译器优化</p>
+            <p><strong>归档说明：</strong>Final audited deliverable archived. 19 pages comprehensive survey covering TSP microarchitecture, functional slicing, 144-way VLIW ISA, compiler optimization techniques, multi-chip synchronization (HAC/SAC), Software-Scheduled Networking (SSN), and NVIDIA acquisition analysis.</p>
+            <p><strong>原始目录：</strong>2026-04-02-Groq-TSP-架构综述</p>
+          </div>
+        </article>
+        
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Generated by ScholarAIO · 2026-04-15</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
