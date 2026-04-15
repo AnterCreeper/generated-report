@@ -7,6 +7,7 @@ Run this script after adding new papers to regenerate the site.
 import json
 import shutil
 import os
+import zipfile
 from pathlib import Path
 from datetime import datetime
 
@@ -56,6 +57,49 @@ def copy_pdfs(papers):
         else:
             p["_pdf_url"] = ""
 
+def build_source_zips(papers):
+    """Create ZIP archives containing TeX sources and images for each paper."""
+    for p in papers:
+        src_dir = PUBLISHED_DIR / p["_source_dir"]
+        dest_dir = ASSETS_PAPERS / p["_slug"]
+        dest_dir.mkdir(parents=True, exist_ok=True)
+
+        zip_name = f"{p['_slug']}-source.zip"
+        zip_path = dest_dir / zip_name
+
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            # Include all TeX files listed in metadata
+            for tex_file in p.get("tex_files", []):
+                tex_path = src_dir / tex_file
+                if tex_path.exists():
+                    zf.write(tex_path, arcname=tex_file)
+
+            # Include images directory
+            images_dir_name = p.get("images_dir", "images")
+            images_dir = src_dir / images_dir_name
+            if images_dir.exists() and images_dir.is_dir():
+                for img_path in images_dir.rglob("*"):
+                    if img_path.is_file():
+                        arcname = f"{images_dir_name}/{img_path.relative_to(images_dir)}"
+                        zf.write(img_path, arcname=arcname)
+
+            # Include misc directory (supplementary materials like .bib, outlines, etc.)
+            misc_dir_name = p.get("misc_dir", "misc")
+            misc_dir = src_dir / misc_dir_name
+            if misc_dir.exists() and misc_dir.is_dir():
+                for misc_path in misc_dir.rglob("*"):
+                    if misc_path.is_file():
+                        arcname = f"{misc_dir_name}/{misc_path.relative_to(misc_dir)}"
+                        zf.write(misc_path, arcname=arcname)
+
+            # Include metadata.json for completeness
+            meta_path = src_dir / "metadata.json"
+            if meta_path.exists():
+                zf.write(meta_path, arcname="metadata.json")
+
+        p["_source_zip_url"] = f"assets/papers/{p['_slug']}/{zip_name}"
+        print(f"Created source ZIP: {zip_path}")
+
 def generate_html(papers):
     subjects = sorted(set(p.get("subject", "其他") for p in papers))
     years = sorted(set(p.get("date", "")[:4] for p in papers if p.get("date")), reverse=True)
@@ -75,6 +119,8 @@ def generate_html(papers):
         author_str = ", ".join(authors) if authors else ""
 
         pdf_btn = f'<a class="btn btn-primary" href="{pdf_url}" target="_blank">📄 PDF</a>' if pdf_url else ""
+        source_zip_url = p.get("_source_zip_url", "")
+        source_btn = f'<a class="btn btn-secondary" href="{source_zip_url}" download>📦 原文获取</a>' if source_zip_url else ""
 
         cards_html.append(f'''
         <article class="paper-card" data-subject="{subject}" data-year="{date[:4] if date else ''}" data-keywords="{' '.join(keywords)}">
@@ -92,6 +138,7 @@ def generate_html(papers):
           </div>
           <div class="paper-footer">
             {pdf_btn}
+            {source_btn}
             <button class="btn btn-secondary" onclick="toggleAbstract(this, '{slug}')">ℹ️ 详情</button>
           </div>
           <div class="paper-abstract" id="abs-{slug}" style="display:none;">
@@ -525,6 +572,8 @@ def generate_readme():
 - **现代设计**：响应式布局、暗色模式、卡片式论文列表
 - **实时筛选**：支持按年份、主题过滤，以及关键词搜索
 - **PDF 直链**：每篇论文的 PDF 均可直接在线预览或下载
+- **原文获取**：每篇论文提供 ZIP 压缩包下载，包含完整 TeX 源文件与插图
+- **原文获取**：每篇论文提供 ZIP 压缩包下载，包含完整 TeX 源文件与插图
 
 ## 本地预览
 
@@ -579,6 +628,7 @@ def main():
         return
     print(f"Found {len(papers)} papers.")
     copy_pdfs(papers)
+    build_source_zips(papers)
     generate_html(papers)
     generate_css()
     generate_js()
