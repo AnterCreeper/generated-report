@@ -45,7 +45,7 @@ git remote add origin https://github.com/yourname/published-papers.git
 git push -u origin main
 ```
 
-3. 进入仓库 Settings → Pages → Source，选择 **Deploy from a branch**，分支选 `main`，文件夹选 `/ (root)`
+3. 进入仓库 Settings → Pages → Source，选择 **Deploy from a branch**，分支选 `main`，文件夹选 `/ (root)**
 4. 等待几分钟后，访问 `https://yourname.github.io/published-papers/`
 
 ### 方式二：作为项目子目录（若需挂载到子路径）
